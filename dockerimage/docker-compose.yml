@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  geoserver:
+    image: geodocker
+    build: ./geo
+    ports:
+      - "8080:8080"
+    volumes: 
+      - ./geo/geoserver:/usr/share/geoserver
+      - ./geo/_capasIsa:/usr/share/geoserver/data_dir/_capasIsa
+    working_dir: /usr/share/geoserver/bin
+    expose:
+      - "8080"
+    command: "sh /usr/share/geoserver/bin/startup.sh"
+
+  db:
+    image: postgis/postgis
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"
+
+  react:
+    image: react_app
+    build: ./reactapp
+    ports:
+      - "3000:3000"
+    volumes:
+     - ./reactapp/public:/home/node/app/public
+     - ./reactapp/src:/home/node/app/src
+    working_dir: /home/node/app
+    expose:
+      - "3000"
+    command: "npm start"
+    

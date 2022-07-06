@@ -1,0 +1,17 @@
+.leaflet-container {
+    height: 100vh;
+    
+}
+
+.my-div-icon {
+    background-color: black;
+    width: 4rem;
+    height: 4rem;
+    transform: rotate(45deg);
+    display: block;
+    left: -1.5rem;
+    top: -1.5rem;
+    position: relative;
+    border-radius: 3rem 3rem 3rem 3rem;
+    border: 1px solid #FFF;
+}
