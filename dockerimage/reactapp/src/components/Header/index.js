@@ -24,7 +24,7 @@ export const Header = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Torres Eléctricas
+            DroneSky|Visor: Torres de alta tensión
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>

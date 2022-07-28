@@ -2,7 +2,7 @@ import React from 'react';
 
 const useDatosGeoJSON = () => {
 
-    const IP = "18.118.187.167"
+    const IP = "18.117.160.54"
 
     const torresJSON = `http://${IP}:8080/geoserver/dronesky/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dronesky%3ACentroide_Torres&outputFormat=application%2Fjson`;
 
